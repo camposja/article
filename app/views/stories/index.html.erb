@@ -1,9 +1,9 @@
 <div class="page-header">
-  <%= link_to new_story_path, class: 'btn btn-primary' do %>
+  <%= link_to new_story_path, class: 'btn btn-success' do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Story
   <% end %>
-  <h1 Listing>stories</h1>
+  <h1 Listing>Iron News</h1>
 </div>
 
 <div class="table-responsive">
@@ -17,7 +17,7 @@
       </tr>
     </thead>
 
-    <tbody class="table-body">
+    <tbody class="table-body table-hover">
       <%- @stories.each do |story| %>
       <tr>
         <td><%= story.number %></td>
