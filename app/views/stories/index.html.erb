@@ -1,9 +1,5 @@
 <div class="page-header">
-  <%= link_to new_story_path, class: 'btn btn-success' do %>
-    <span class="glyphicon glyphicon-plus"></span>
-    New Story
-  <% end %>
-  <h3 Listing>Iron News</h3>
+  <h3 Listing>| Iron News |</h3>
 </div>
 
 <div class="table-responsive">
@@ -13,6 +9,7 @@
         <th><h6>Story#</h6></th>
         <th><h6>Title</h6></th>
         <th><h6>Contributor email</h6></th>
+        <th><h6>Published on: </h6></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -23,6 +20,7 @@
         <td><small><%= story.number %></small></td>
         <td><small><%= story.title %></small></td>
         <td><small><%= story.email %></small></td>
+        <td><small><%= story.created_at %></small></td>
         <td>
           <%= link_to story do %>
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>

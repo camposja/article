@@ -20,7 +20,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="controller-<%= controller_name%> action-<%= action_name%>">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,7 +38,20 @@
           <li class="active"><%= link_to "Home", "#" %></li>
         </ul>
       </div>
+
+      <div class="navbar-header navbar-right">
+        <ul>
+          <li>
+            <%= link_to new_story_path, class: 'btn btn-success' do %>
+              <span class="glyphicon glyphicon-plus"></span>
+              New Story
+            <% end %>
+          </li>
+        </ul>
+      </div>
+
     </div>
+
   </nav>
   <div class="container">
     <% flash.each do |name, msg| %>
