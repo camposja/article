@@ -17,8 +17,8 @@
     <tbody class="table-body table-striped table-hover">
       <%- @stories.each do |story| %>
       <tr>
-        <td><small><%= story.number %></small></td>
-        <td><small><%= story.title %></small></td>
+        <td><small><%= story.id %></small></td>
+        <td><small><%= link_to story.title, url:story.link %></small></td>
         <td><small><%= story.email %></small></td>
         <td><small><%= story.created_at %></small></td>
         <td>
