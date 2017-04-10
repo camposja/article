@@ -1,7 +1,7 @@
 class StoriesController < ApplicationController
   # GET /stories
   def index
-    @stories = Story.all.order(:created_at).reverse
+    @stories = Story.all.order(:created_at => "DESC")
   end
 
   # GET /stories/1
@@ -50,6 +50,6 @@ class StoriesController < ApplicationController
   private
     # Only allow a trusted parameter "white list" through.
     def story_params
-      params.require(:story).permit(:number, :title, :email)
+      params.require(:story).permit(:number, :title, :email, :link)
     end
 end

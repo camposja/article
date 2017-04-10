@@ -15,10 +15,10 @@
     </thead>
 
     <tbody class="table-body table-striped table-hover">
-      <%- @stories.each do |story| %>
+      <%- @stories.each_with_index do |story, index| %>
       <tr>
-        <td><small><%= story.id %></small></td>
-        <td><small><%= link_to story.title, url:story.link %></small></td>
+        <td><small><%= index + 1 %></small></td>
+        <td><small><%= link_to story.title, story.link %></small></td>
         <td><small><%= story.email %></small></td>
         <td><small><%= story.created_at %></small></td>
         <td>
