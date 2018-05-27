@@ -10,18 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407181336) do
+ActiveRecord::Schema.define(version: 20180527052356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "files", force: :cascade do |t|
+    t.binary "content"
+    t.text   "metadata"
+  end
 
   create_table "stories", force: :cascade do |t|
     t.integer  "number"
     t.string   "title"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "link"
+    t.integer  "created_by_id"
+    t.text     "image_data"
+    t.integer  "position"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

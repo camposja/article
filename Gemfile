@@ -22,6 +22,9 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Turbolinks makes navigating your web application faster. Read: https://github.com/turbolinks/turbolinks
+gem 'turbolinks'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -52,6 +55,7 @@ gem 'bootstrap-generators', git: 'https://github.com/gstark/bootstrap-generators
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
+gem 'acts_as_list'
 group :development do
   gem 'dotenv-rails'
 end
